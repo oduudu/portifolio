@@ -1,0 +1,148 @@
+<!--
+    PALETA DE CORES DO SITE:
+
+    #F21D2F vermelho
+    #F23D5E vermelho rosa claro
+    #D9D2D3 cinza
+    #681673 roxo
+    #2D1859 roxo azulado
+
+    site gerar alerts:
+    
+    https://sweetalert.js.org/guides/
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DuDuX - Home</title>
+    <link rel="shortcut icon" type="imagex/png" href="assets/img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script type="text/javascript" src="assets/js/script.js"></script>
+</head>
+<body>
+    <div class="alert"></div>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <!-- <abbr title="Logo da Loja"><img src="assets/img/ddx.png" alt="Logo DDX STORE" id="logo"></abbr> -->
+                <h1><span class="dedex">DuDuX</span></h1>
+
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#habilidades" class="nav-link" target="_self" rel="next">Habilidades</a></li>
+                    <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
+                    <li class="nav-item"><a href="#projetos" class="nav-link" target="_self" rel="next">Projetos</a></li>
+                </ul>
+            </div>
+
+            <div class="login-button">
+                <button onclick="embreve()"><a class="login-text">Login</a></button>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img src="assets/img/menu_white_36dp.svg" class="icon"></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#habilidades" class="nav-link" target="_self" rel="next">Habilidades</a></li>
+                    <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
+                    <li class="nav-item"><a href="#projetos" class="nav-link" target="_self" rel="next">Projetos</a></li>
+            </ul>
+
+            <div class="login-button">
+                <button><a onclick="embreve()" class="login-text">Login</a></button>
+            </div>
+        </div>
+    </header>
+    <div class="alert"></div>
+
+    <main>
+        <section>
+            <em><h2 class="titles">Olá, eu sou o </em><b><a title="Ir para o canal" href="https://www.youtube.com/channel/UCgcU_DXtMNQzMqpZIMlm4LA" target="_blank" rel="external" class="direito">DuDuX</a>!</b></h2>
+            <p class="resposta" id="soprateste">Um jovem estudante de programação e designer.</p><br><br><br>
+
+            <em><h2 class="titles" id="habilidades">Habilidades</b></h2></em><br>
+            <p>
+                <ul type="none">
+                    <li><a href="#" class="langs" onclick="htmlshow()">HTML</a></li>
+                    <br>
+                    <li><a href="#" class="langs" onclick="cssshow()">CSS</a></li>
+                    <br>
+                    <li><a href="#" class="langs" onclick="jsshow()">JavaScript</a></li>
+                    <br>
+                    <li><a href="#" class="langs" onclick="designshow()">Design</a></li>
+                </ul>
+            </p><br><br>
+
+            <em><h2 class="titles" id="contato">Contato</b></h2></em><br>
+            <p>
+                <ul type="none">
+                    <li><a href="#" onclick="discordview()" class="externial"> Discord</a></li>
+                    <br>
+                    <li><a href="mailto:dudugfbb@gmail.com" class="externial"> E-Mail</a></li>
+                    <br>
+                    <li><a href="https://www.instagram.com/duudu.dll?igsh=bzRoNWNiZnd6aXN2" class="externial" target="_blank" rel="external">Instagram</a></li>
+                </ul>
+            </p><br><br>
+
+            <section id="projetos" class="projetos">
+                <div class="container">
+                    <h2>Projetos</h2><br>
+                    <div class="projeto-grid">
+                        <!-- Adicione projetos aqui -->
+                        <div class="projeto-item"><a href="https://discord.gg/hxRk4Qvv8t" target="_blank
+                        ">Projeto 1</a></div>
+                        <div class="projeto-item" onclick="emdev()"><a href="#">Projeto 2</a></div>
+                        <div class="projeto-item" onclick="emdev()"><a href="#">Projeto 3</a></div>
+                    </div>
+                </div>
+            </section>
+        </section>   
+    </main>
+
+
+    <!--
+    Link de download
+        <a href="imgs/ddx.zip" download="ddx.zip" type="aplication/zip" target="_blank">Livro em ZIP</a></li>
+    -->
+
+    <footer>
+        <p>2024 Todos direitos reservados &copy;.</p><p id="dudu">DuDuX</p>
+    </footer>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</body>
+</html>
+
+
+
+
+<!--
+    <table style="width: 30%;">
+        <tr style="height: 70px;">
+            <b>
+                <th>Preço</th>
+                <th>Produto</th>
+                <th>Avaliação</th>
+            </b>
+        </tr>
+        <tr style="height: 70px;">
+            <th>Nitro Basic</th>
+            <th>R$5.00</th>
+            <th>10.0</th>
+        </tr>
+        <tr style="height: 70px;">
+            <th>Nitro Gaming</th>
+            <th>7.50</th>
+            <th>9.9</th>
+        </tr>
+    </table
+    -->    
