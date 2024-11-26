@@ -453,3 +453,9 @@ a#canalcev {
         display: block;
     }
 }
+
+
+.direito {
+    text-decoration: none;
+    cursor: pointer;
+}
