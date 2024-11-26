@@ -34,7 +34,7 @@
 }
 body {
     /*background-color: #fcfcfc;*/
-    background-color: white;
+    background-color: #c5e2fc;
     background-size: cover;
     color: #333;
 }
@@ -157,7 +157,7 @@ abbr {
 }
 
 .nav-link {
-    font-family: serif, sans-serif;
+    font-family: sans-serif;
     text-decoration: none;
     font-size: 1.6rem;
     color: blue;
