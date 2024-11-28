@@ -1,150 +1,120 @@
-<!--
-    PALETA DE CORES DO SITE:
-
-    #F21D2F vermelho
-    #F23D5E vermelho rosa claro
-    #D9D2D3 cinza
-    #681673 roxo
-    #2D1859 roxo azulado
-
-    site gerar alerts:
-    
-    https://sweetalert.js.org/guides/
--->
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dudu - Home</title>
-    <link rel="shortcut icon" type="imagex/png" href="assets/img/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <script type="text/javascript" src="assets/js/script.js"></script>
+    <title>Portifólio Dudu</title>
+    <link rel="icon" href="carregando.png">
+	<script>
+		//alert("Site em Desenvolvimento.");
+		document.addEventListener('DOMContentLoaded', () => {
+	    const notification = document.getElementById('notification');
+	    const notificationMessage = document.getElementById('notification-message');
+	    const closeBtn = document.getElementById('close-btn');
+
+	    const showNotification = (message) => {
+	        notificationMessage.textContent = message;
+	        notification.classList.add('show');
+
+	        setTimeout(() => {
+	            notification.classList.remove('show');
+	        }, 3000);
+	    };
+
+	    closeBtn.addEventListener('click', () => {
+	        notification.classList.remove('show');
+	    });
+
+	    // Mostrar notificação ao carregar a página
+	    showNotification('Site está em desenvolvimento, aguarde a vontade do Dudu!');
+	});
+
+
+	</script>
+	<style>
+		* {
+			font-family: Arial;
+			margin: 0;
+			padding: 0;
+		}
+		h1 {
+			margin-top: 40px;
+			font-size: 5.5em;
+			color: blueviolet;
+			text-shadow: 1px 1px 1px mediumpurple;
+			text-align: center;
+		}
+
+		body {
+	    font-family: Arial, sans-serif;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    height: 100vh;
+	    margin: 0;
+	    background-color: #f0f0f0;
+	}
+
+	.notification {
+	    display: none;
+	    position: fixed;
+	    bottom: 20px;
+	    right: 20px;
+	    background-color: #333;
+	    color: #fff;
+	    padding: 15px;
+	    border-radius: 5px;
+	    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	    animation: fadeIn 0.5s;
+	}
+
+	.notification.show {
+	    display: block;
+	}
+
+	.close-btn {
+	    background: none;
+	    border: none;
+	    color: #fff;
+	    font-size: 20px;
+	    cursor: pointer;
+	    margin-left: 10px;
+	}
+
+	.show-notification-btn {
+	    padding: 10px 20px;
+	    background-color: #007bff;
+	    color: #fff;
+	    border: none;
+	    border-radius: 5px;
+	    cursor: pointer;
+	}
+
+	@keyframes fadeIn {
+	    from {
+	        opacity: 0;
+	        transform: translateY(10px);
+	    }
+	    to {
+	        opacity: 1;
+	        transform: translateY(0);
+	    }
+	}
+
+	h2 {
+		font-size: 5.5em;
+		text-align: center;
+		color: dark;
+		text-shadow: 2px 2px 1px darkblue;
+	}
+	</style>
 </head>
 <body>
-    <div class="alert"></div>
-    <header>
-        <nav class="nav-bar">
-            <div class="logo">
-                <!-- <abbr title="Logo da Loja"><img src="assets/img/ddx.png" alt="Logo DDX STORE" id="logo"></abbr> -->
-                <h1><span class="dedex">DuDu</span></h1>
+    <div id="notification" class="notification">
+        <span id="notification-message"></span>
+        <button id="close-btn" class="close-btn">&times;</button>
+    </div>
 
-            </div>
-            <div class="nav-list">
-                <ul>
-                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="#habilidades" class="nav-link" target="_self" rel="next">Habilidades</a></li>
-                    <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
-                    <li class="nav-item"><a href="#projetos" class="nav-link" target="_self" rel="next">Projetos</a></li>
-                </ul>
-            </div>
-
-            <div class="login-button">
-                <button onclick="embreve()"><a class="login-text">Login</a></button>
-            </div>
-
-            <div class="mobile-menu-icon">
-                <button onclick="menuShow()"><img src="assets/img/menu_white_36dp.svg" class="icon"></button>
-            </div>
-        </nav>
-        <div class="mobile-menu">
-            <ul>
-                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#habilidades" class="nav-link" target="_self" rel="next">Habilidades</a></li>
-                    <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
-                    <li class="nav-item"><a href="#projetos" class="nav-link" target="_self" rel="next">Projetos</a></li>
-            </ul>
-
-            <div class="login-button">
-                <button><a onclick="embreve()" class="login-text">Login</a></button>
-            </div>
-        </div>
-    </header>
-    <div class="alert"></div>
-
-    <main>
-        <section>
-            <em><h2 class="titles">Olá, eu sou o </em><b><a class="direito">Dudu</a>!</b></h2>
-            <p class="resposta" id="soprateste">Um jovem estudante de programação e designer.</p><br><br><br>
-
-            <em><h2 class="titles" id="habilidades">Habilidades</b></h2></em><br>
-            <p>
-                <ul type="none">
-                    <li><a href="#" class="langs" onclick="htmlshow()">HTML</a></li>
-                    <br>
-                    <li><a href="#" class="langs" onclick="cssshow()">CSS</a></li>
-                    <br>
-                    <li><a href="#" class="langs" onclick="jsshow()">JavaScript</a></li>
-                    <br>
-                    <li><a href="#" class="langs" onclick="designshow()">Design</a></li>
-                </ul>
-            </p><br><br>
-
-            <em><h2 class="titles" id="contato">Contato</b></h2></em><br>
-            <p>
-                <ul type="none">
-                    <li><a href="#" onclick="discordview()" class="externial"> Discord</a></li>
-                    <br>
-                    <li><a href="mailto:dudugfbb@gmail.com" class="externial"> E-Mail</a></li>
-                    <br>
-                    <li><a href="https://www.instagram.com/duudu.dll?igsh=bzRoNWNiZnd6aXN2" class="externial" target="_blank" rel="external">Instagram</a></li>
-                </ul>
-            </p><br><br>
-
-            <section id="projetos" class="projetos">
-                <div class="container">
-                    <h2>Projetos</h2><br>
-                    <div class="projeto-grid">
-                        <!-- Adicione projetos aqui -->
-                        <div class="projeto-item" onclick="emdev()"
-                        href="#"><a>Projeto 1</a></div>
-                        <div class="projeto-item" onclick="emdev()"
-                        href="#"><a>Projeto 2</a></div>
-                        <div class="projeto-item" onclick="emdev()"
-                        href="#"><a>Projeto 3</a></div>
-                    </div>
-                </div>
-            </section>
-        </section>   
-    </main>
-
-
-    <!--
-    Link de download
-        <a href="imgs/ddx.zip" download="ddx.zip" type="aplication/zip" target="_blank">Livro em ZIP</a></li>
-    -->
-
-    <footer>
-        <p>2024 Todos direitos reservados &copy;.</p>
-    </footer>
-
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
+    <h2>Site em Desenvolvimento</h1>
 </body>
 </html>
-
-
-
-
-<!--
-    <table style="width: 30%;">
-        <tr style="height: 70px;">
-            <b>
-                <th>Preço</th>
-                <th>Produto</th>
-                <th>Avaliação</th>
-            </b>
-        </tr>
-        <tr style="height: 70px;">
-            <th>Nitro Basic</th>
-            <th>R$5.00</th>
-            <th>10.0</th>
-        </tr>
-        <tr style="height: 70px;">
-            <th>Nitro Gaming</th>
-            <th>7.50</th>
-            <th>9.9</th>
-        </tr>
-    </table
-    -->    
